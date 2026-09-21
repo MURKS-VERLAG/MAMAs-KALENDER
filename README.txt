@@ -1,29 +1,10 @@
-SOFORT-FIX
+UPLOAD NUR DIESE 2 DATEIEN:
+1) index.html ersetzen
+2) app-ios.js NEU hinzufügen
 
-Ersetze im bestehenden GitHub-Projekt NUR app.js durch diese app.js.
+NICHT löschen/ersetzen: style.css, assets/, MP3.
 
-NICHT ersetzen:
-- index.html
-- style.css
-- Bilder
-- MP3
+WICHTIG: index.html lädt absichtlich NICHT MEHR app.js, sondern app-ios.js mit Versionsparameter.
+Damit kann Safari keine alte kaputte app.js aus dem Cache weiterverwenden.
 
-Diese Datei stellt die komplette App-Logik wieder her. Sie ist NICHT nur ein
-playOptionA()-Snippet.
-
-Beibehalten:
-- Kalender + Speicherung
-- Kalender/Geschenk Swipe
-- Fotoalbum
-- Herz-Übergang
-- Musik
-- Bild-Preloading
-- Option B
-- Option A Reihenfolge a3 -> a1 -> a2
-
-Safari-Fix:
-- Promise.allSettled vollständig entfernt (war für das Preloading ohnehin unnötig)
-- decode/fetchPriority nur feature-detected
-- WebKit transform/transition fallback
-- Touch-Swipe bleibt primär
-- Audio wird erst durch echten Touch/Klick entsperrt
+Keine Bilder und keine MP3 in diesem ZIP.
