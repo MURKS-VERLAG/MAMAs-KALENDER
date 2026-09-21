@@ -1,14 +1,14 @@
-# Mama-Kalender 21.09.2026–21.09.2027
+# Mama-Kalender 2026–2027
 
 Mobile Hochkant-Web-App für GitHub Pages.
 
-## GitHub Pages
-1. ZIP entpacken und `index.html`, `style.css`, `app.js` ins Repository hochladen.
-2. GitHub: Settings → Pages → Deploy from a branch → `main` / root.
-3. Auf dem Handy die Pages-Adresse öffnen. Optional zum Home-Bildschirm hinzufügen.
+## Veröffentlichung
+1. Alle Dateien aus diesem Ordner in ein GitHub-Repository hochladen.
+2. Unter **Settings → Pages** bei **Deploy from a branch** den Branch `main` und den Ordner `/root` auswählen.
+3. Die erzeugte GitHub-Pages-Adresse auf dem Handy öffnen.
 
 ## Speicherung
-Kalendereinträge werden automatisch im `localStorage` des Browsers auf dem jeweiligen Gerät gespeichert und bleiben beim Schließen/Neuladen erhalten. Browserdaten löschen oder ein anderes Gerät/einen anderen Browser verwenden überträgt die Einträge nicht.
+Kalendereinträge werden automatisch im `localStorage` des verwendeten Browsers gespeichert. Sie bleiben auf demselben Gerät und im selben Browser erhalten, solange die Browserdaten nicht gelöscht werden.
 
-## Umfang
-Start: 21.09.2026. Ende: 21.09.2027. Volle Monate sind 1–10, 11–20 und 21–Monatsende aufgeteilt. Der 21. September trägt eine Geburtstagstorte.
+## Musik
+Die App versucht die Musik nach dem Intro zu starten. Manche mobile Browser erlauben Ton erst nach der ersten Berührung des Bildschirms; danach startet die Musik automatisch. Oben rechts lässt sie sich stummschalten.

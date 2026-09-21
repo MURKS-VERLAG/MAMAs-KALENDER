@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no" />
 <meta name="theme-color" content="#ffffff" />
 <title>Für Mama ❤️</title>
 <link rel="stylesheet" href="style.css" />
@@ -19,12 +19,13 @@
     <div class="home-wrap">
       <h1>Für Mama</h1>
       <button class="big-card" id="calendarBtn" aria-label="Kalender öffnen">
-        <span class="icon calendar-icon">21</span>
-        <span>Kalender</span>
+        <span class="icon calendar-icon">21</span><span>Kalender</span>
+      </button>
+      <button class="big-card" id="albumBtn" aria-label="Fotoalbum öffnen">
+        <span class="album-icon">♡</span><span>Fotoalbum</span>
       </button>
       <button class="big-card" id="giftBtn" aria-label="Geschenk öffnen">
-        <span class="gift-icon">🎁</span>
-        <span>Geschenk</span>
+        <span class="gift-icon">🎁</span><span>Geschenk</span>
       </button>
     </div>
   </section>
@@ -35,14 +36,22 @@
     <button class="home-btn" data-home aria-label="Startseite">⌂</button>
   </section>
 
-  <section id="gift" class="screen">
-    <div class="gift-choice">
-      <button class="choice">A</button>
-      <button class="choice">B</button>
+  <section id="album" class="screen">
+    <div class="album-message">
+      <div class="album-heart">♡</div>
+      <p id="typewriterText"></p>
     </div>
     <button class="home-btn" data-home aria-label="Startseite">⌂</button>
   </section>
 
+  <section id="gift" class="screen">
+    <div id="giftPages" class="pages gift-pages"></div>
+    <div id="giftDots" class="dots"></div>
+    <button class="home-btn" data-home aria-label="Startseite">⌂</button>
+  </section>
+
+  <button id="soundBtn" class="sound-btn hidden" aria-label="Musik stummschalten">🔊</button>
+  <audio id="music" src="top-of-the-world.mp3" loop preload="auto"></audio>
   <div id="heartCurtain" aria-hidden="true"></div>
 </div>
 <script src="app.js"></script>
