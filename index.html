@@ -1,4 +1,13 @@
-<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no"><meta name="theme-color" content="#ffffff"><title>Für Mama ❤️</title><link rel="stylesheet" href="style.css"></head><body><div id="app">
+<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no"><meta name="theme-color" content="#ffffff"><title>Für Mama ❤️</title><link rel="stylesheet" href="style.css">
+<!-- Story-Bilder sofort beim ersten HTML-Request priorisiert vorladen. -->
+<link rel="preload" as="image" href="assets/a1.png" fetchpriority="high">
+<link rel="preload" as="image" href="assets/a2.png" fetchpriority="high">
+<link rel="preload" as="image" href="assets/a3.png" fetchpriority="high">
+<link rel="preload" as="image" href="assets/a4.png" fetchpriority="high">
+<link rel="preload" as="image" href="assets/a5.png" fetchpriority="high">
+<link rel="preload" as="image" href="assets/a6.png" fetchpriority="high">
+<link rel="preload" as="image" href="assets/a7.png" fetchpriority="high">
+<link rel="preload" as="image" href="assets/a8.png" fetchpriority="high"></head><body><div id="app">
 <section id="intro" class="screen active"><svg class="heart-draw" viewBox="0 0 120 110" aria-label="Herz"><path d="M60 99 C52 88 13 65 13 35 C13 15 36 7 49 19 C55 24 58 29 60 34 C62 29 65 24 71 19 C84 7 107 15 107 35 C107 65 68 88 60 99Z"/></svg></section>
 <section id="home" class="screen"><div class="home-wrap"><h1>Für Mama</h1><button class="big-card" id="calendarBtn"><span class="icon calendar-icon">21</span><span>Kalender</span></button><button class="big-card" id="albumBtn"><span class="album-icon">♡</span><span>Fotoalbum</span></button><button class="big-card" id="giftBtn"><span class="gift-icon">🎁</span><span>Geschenk</span></button></div></section>
 <section id="calendar" class="screen"><div class="viewport"><div id="calendarPages" class="pages"></div></div><div id="pageDots" class="dots"></div><button class="home-btn" data-home>⌂</button></section>
