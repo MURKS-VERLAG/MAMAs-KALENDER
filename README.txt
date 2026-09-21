@@ -1,20 +1,29 @@
-SAFARI FIX – NUR app.js ERSETZEN
+SOFORT-FIX
 
-Warum die letzte Version auf dem iPhone komplett ausfiel:
-Die zuletzt gelieferte app.js war nur ein Mini-Patch mit playOptionA().
-Wenn diese Datei als app.js hochgeladen wurde, fehlte die komplette restliche App.
+Ersetze im bestehenden GitHub-Projekt NUR app.js durch diese app.js.
 
-Diese app.js ist deshalb wieder die VOLLSTÄNDIGE aktuelle Logik, aber Safari-kompatibler:
-- keine Arrow Functions
-- keine const/let-Abhängigkeit
-- kein Promise.allSettled
-- keine zwingende fetchPriority/decode-Unterstützung
-- WebKit transform/transition Fallback
-- Touch-Swipe direkt für iPhone Safari
-- Audio-Unlock bei echter Touch-/Klick-Geste
-- Bild-Preloading bleibt
-- Option A bleibt a3 -> a1 -> a2
-- alles andere bleibt funktional gleich
+NICHT ersetzen:
+- index.html
+- style.css
+- Bilder
+- MP3
 
-ZIP enthält absichtlich NUR app.js + README.txt.
-Keine Bilder, keine MP3, kein CSS, kein index.html.
+Diese Datei stellt die komplette App-Logik wieder her. Sie ist NICHT nur ein
+playOptionA()-Snippet.
+
+Beibehalten:
+- Kalender + Speicherung
+- Kalender/Geschenk Swipe
+- Fotoalbum
+- Herz-Übergang
+- Musik
+- Bild-Preloading
+- Option B
+- Option A Reihenfolge a3 -> a1 -> a2
+
+Safari-Fix:
+- Promise.allSettled vollständig entfernt (war für das Preloading ohnehin unnötig)
+- decode/fetchPriority nur feature-detected
+- WebKit transform/transition fallback
+- Touch-Swipe bleibt primär
+- Audio wird erst durch echten Touch/Klick entsperrt
