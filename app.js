@@ -1,5 +1,19 @@
 'use strict';
 
+/* FAIL-SAFE: Das Intro darf niemals die komplette App blockieren.
+   Dieser Timer wird registriert, BEVOR Preloading, Kalender, Pager oder Audio initialisiert werden. */
+setTimeout(function(){
+  var intro=document.getElementById('intro');
+  var home=document.getElementById('home');
+  var heart=document.querySelector('.heart-draw');
+  var sound=document.getElementById('soundBtn');
+  if(heart) heart.classList.add('done');
+  if(intro) intro.classList.remove('active');
+  if(home) home.classList.add('active');
+  if(sound) sound.classList.remove('hidden');
+},4400);
+
+
 const screens=[...document.querySelectorAll('.screen')],
 pagesEl=document.getElementById('calendarPages'),
 dotsEl=document.getElementById('pageDots'),
@@ -398,5 +412,5 @@ document.addEventListener('click',unlockAudio);
 setTimeout(()=>{
   document.querySelector('.heart-draw').classList.add('done');
   soundBtn.classList.remove('hidden');
-  heartTransition('home');
+  show('home');
 },4400);
